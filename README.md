@@ -1,9 +1,9 @@
 ## ⚙️*Sistema de Avaliação de filmes* 
 >✅Estrutura MVC <br>
 >✅Metodologias ágeis <br>
->✅Diagramas UML <br>
 >✅Níveis de acesso <br>
->✅PHP, MySQL, JavaScript, API's
+>✅Validações <br>
+>✅PHP, MySQL, JavaScript
 
 <div>
   <img height="100em" src="https://github-readme-stats.vercel.app/api/pin/?username=fabioVitorio&repo=pellicula_filmes"/>
