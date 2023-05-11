@@ -21,3 +21,15 @@
 <img src="https://user-images.githubusercontent.com/105173431/209452024-174188f0-d7dc-4bae-82f6-12ddfd4d9bcc.png" /> 
   
   
+## 🖥️*Funcionalidades* 
+>👨🏻‍💻 **Administrador** <br>
+>▫️ Cadastrar filme <br>
+>▫️ Editar filme<br>
+>▫️ Excluir filme<br><br>
+>🙎🏻‍♂ **Usuário** <br>
+>▫️ Ver sinopse <br>
+>▫️ Ver avaliação<br>
+>▫️ Ver ranking <br>
+>▫️ Ver comentários<br>
+>▫️ Realizar avaliação<br>
+>▫️ Realizar comentários<br>
