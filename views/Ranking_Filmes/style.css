@@ -1,0 +1,793 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(31,31,31,1) 28%, rgba(0,0,0,1) 100%) !important;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------ HEADER -----------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+#menu{
+    border: 0px solid #fff;
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    z-index: 99;
+}
+
+#menu.sticky{
+    background-color: #121212;
+    border-bottom: 2px solid rgb(43, 43, 43);
+    height: 70px;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+}
+
+#logo{
+    border: 0px solid #fff;
+    width: 100px;
+    height: 40px;
+    background-image: url(img/pellicula.png);
+    background-size: 100px 40px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+#ul{
+    border: 0px solid #000;
+    width: 520px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+li{
+    display: inline;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14pt;
+    margin: 0 0 0 35px;
+    position: relative;
+    color: #fff;
+}
+
+#ul > li > a:hover{
+    color: rgb(248, 248, 248);
+}
+
+
+#ul > li > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#ul > li > a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #e50914;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+#ul > li > a:hover::after{
+    width: 100%;
+}
+
+#icon_user{
+    /* border: 1px solid black; */
+     /* DISPLAY LOGIN*/
+     display: block !important;;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin-top: -32px;
+    margin-right: -15px;
+    float: right;
+    color: #fff;
+    transition: all 0.8s ease-in-out;
+}
+
+#icon_user:hover{
+    color:#e50914;
+}
+
+#user{
+    width: 100%;
+    height: 100%;
+    display:block !important;
+}
+
+/* POP UP DE LOGOUT */
+.icons-size{
+    color: #333;
+    font-size: 14px;
+}
+.action{
+    position: fixed;
+    right: 30px;
+    top:50px
+}
+.action .profile{
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+}
+
+.action .menuUser{
+    background-color:#FFF;
+    box-sizing:0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    right: -10px;
+    width: 200px;
+    transition: 0.5s;
+    top: 120px;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menuUser.active{
+    opacity: 1;
+    top: 15px;
+    visibility: visible;
+}
+.action .menuUser::before{
+    background-color:#fff;
+    content: '';
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    transform:rotate(45deg);
+    top:-5px;
+    width: 20px;
+}
+.action .menuUser h3{
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 20px 0px;
+    text-align: left;
+    width: 100%;
+}
+.action .menuUser h3 div{
+    color: #818181;
+    font-size: 14px;
+    font-weight: 400;
+}
+.action .menuUser ul li{
+    align-items: center;
+    border-top:1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 10px 0px;
+}
+
+.action .menuUser ul li a{
+    display: inline-block;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+
+.action .menuUser ul li:hover a{
+    color:#e50914;
+}
+
+.action .menuUser ul{
+    padding: 0;
+}
+/* FIM POP UP */
+
+#pesquisa {
+    width: 240px;
+    height: 35px;
+    float: right;
+    margin-top: -34px;
+    margin-right: 110px;
+    position: relative;
+}
+
+#barra_pesquisa {
+    width: 100%;
+    height: 34px;
+    padding-left: 10px; 
+    font-size: 12pt;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+#lupa {
+    position: absolute;
+    top:18%;
+    left: 88%;
+}
+
+button{
+    border: none;
+}
+
+/* !!!!! INÍCIO MENU BARRA LATERAL !!!!! */
+#toggle {
+    display: none; /* aqui*/
+    width: 28px;
+    height: 30px;
+    margin: 30px 0 0 140px;
+    position: relative;
+}
+  
+#toggle span:after,
+#toggle span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+}
+
+#toggle span:after{
+    top: 9px;
+}
+
+#toggle span {
+    position: relative;
+    display: block;
+}
+  
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #888;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+  
+#toggle.on span {
+    background-color: transparent;
+}
+
+#toggle.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+#toggle.on + #menuu {
+    opacity: 1;
+    visibility: visible;
+}
+  
+#menuu {
+    display: none; /* aqui*/
+    /* position: relative; */
+    color: #999;
+    width: 200px;
+    padding: 10px;
+    margin: 0 0 0 50px;
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans";
+    text-align: center;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+#menuu:after {
+    position: absolute;
+    top: -20px;
+    left: 155px;
+    content: "";
+    display: block;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+}
+
+#ulMenu, .liMenu, .a {
+    list-style: none;
+    display: none; /* aqui*/
+    margin: 0;
+    padding: 0;
+}
+
+.liMenu .a {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.liMenu .a:hover,
+.liMenu .a:focus {
+    background: #e50914;
+    color: #fff;
+}
+
+
+.btnSubmit{
+    border: 0px solid red !important;  
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    background-color: transparent; 
+    border:none;
+}
+
+
+/* !!!!! FIM MENU BARRA LATERAL !!!!! */
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* -------------------------------------------------------- MAIN TABELA RANK -----------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+main {
+    border: none !important;
+    width: 100%;
+    height: auto;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: none !important;
+}
+
+tr{
+    border: none !important;
+}
+
+td {
+    text-align: center;
+    margin: 0 auto;
+    border: none !important;
+}
+
+.ranking {
+    width:15%;
+}
+
+.ranking > p{
+    color: rgb(143, 143, 143);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-bottom: 0;
+}
+
+.titulo {
+    width: 75%;
+}
+
+.titulo > p{
+    color: rgb(143, 143, 143);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-bottom: 0;
+}
+
+.nota {
+    width: 20%;
+}
+
+.nota > p{
+    color: rgb(143, 143, 143);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-bottom: 0;
+}
+
+.vazia {
+    height: 7vh;
+}
+
+.tabela {
+    height: 25vh;
+}
+
+.texto_grande {
+    font-size: 28pt;
+    color: #fff;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    padding:15px;
+    border: none;
+}
+
+#imagem_filme {
+    float:left;
+    border: 1px solid;
+    width: 7vw;
+    height: 15vh;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+}
+
+#imagem_filme:hover{
+    background-size: 110%;
+}
+
+#texto_filme {
+    float:right;
+    border:1px solid;
+    margin-right: 20px;
+    width: 45vw;
+    height: 15vh;
+    border: none;
+}
+
+.title {
+    text-align: left;
+    font-size: 22pt;
+    color: #fff;
+}
+
+.texto {
+    text-align:left;
+    font-size: 12pt;
+    color: rgb(194, 194, 194);
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------- FOOTER ---------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+footer{
+    border: 0px solid #fff;
+    border-top: 2px solid rgb(43, 43, 43);
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#logoFooter{
+    border: 0px solid #fff;
+    width: 100px;
+    height: 40px;
+    background-image: url(img/pellicula.png);
+    background-size: 100px 40px;
+    float: left;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+#copy{
+    color: rgb(184, 184, 184);
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+
+#contactFooter{
+    float: right;
+    color: rgb(184, 184, 184);
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-right: 15px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------- RESPONSIVIDADE -----------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@media only screen and (max-width: 1050px) {
+
+    table {
+        width: 100%;
+    }
+
+    .tabela {
+        height: 16vh;
+    }
+
+    #imagem_filme {
+        width: 11vw;
+        height: 12vh;
+    }
+
+    #texto_filme {
+        margin-right: 0;
+        width: 45vw;
+        height: 12vh;
+    }
+
+    .texto_grande {
+        font-size: 20pt;
+    }
+
+    .title {
+        font-size: 16pt;
+    }
+
+    .texto {
+        font-size: 12pt;
+    }
+ 
+}
+
+@media only screen and (max-width: 800px) {
+    #ul{
+        display: none;
+    }
+
+    #icon_user{ 
+        margin-top: 18px;
+        margin-right: 10px;
+        margin-top: -34px;
+    }
+
+    #pesquisa {
+        width: 200px;
+        height: 35px;
+        float: right;
+        margin-right: 105px;
+        margin-top: -210px;
+        position: relative;
+    }
+    
+    #barra_pesquisa {
+        width: 100%;
+        height: 34px;
+        padding-left: 10px; 
+        font-size: 12pt;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+    }
+
+
+    #toggle {
+        display: block; /* aqui*/
+    }
+
+    #menuu {
+        display: block; /* aqui*/
+    }
+
+    #ulMenu, .liMenu, .a {
+        display: block; /* aqui*/
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .tabela {
+        height: 16vh;
+    }
+
+    .texto_grande {
+        font-size: 17pt;
+    }
+
+    .title {
+        font-size: 14pt;
+    }
+
+    .texto {
+        font-size: 11pt;
+    }
+ 
+}
+
+@media only screen and (max-width: 570px) {
+
+    article {
+        padding: 0;
+    }
+
+    .tabela {
+        height: 10vh;
+    }
+
+    #imagem_filme {
+        width: 10vw;
+        height: 8vh;
+    }
+
+    #texto_filme {
+        margin-right: 0;
+        width: 46vw;
+        height: 10vh;
+    }
+
+
+    .texto_grande {
+        font-size: 15pt;
+    }
+
+    .title {
+        font-size: 12pt;
+    }
+
+    .texto {
+        font-size: 9pt;
+    }
+ 
+}
+
+@media only screen and (max-width: 520px) {
+    #logo{
+        border: 0px solid #fff;
+        width: 90px;
+        height: 30px;
+        background-image: url(img/pellicula.png);
+        background-size: 90px 30px;
+        float: left;
+        margin-top: 18px;
+        margin-left: 5px;
+    }
+
+    #menuu {
+        width: 140px;
+    }
+
+    #ulMenu, .liMenu, .a {
+        font-size: 10pt;
+    }
+
+    #icon_user{ 
+        margin-top: 18px;
+        margin-right: -33px;
+        margin-top: -33px;
+    }
+
+    #pesquisa {
+        width: 175px;
+        margin-right: 110px;
+        margin-top: -186px;
+    }
+
+    
+    #toggle {
+        width: 25px;
+        height: 30px;
+        margin: 30px 0 0 105px;
+    }
+
+    .ranking > p{
+        font-size: 8pt;
+    }
+
+    .nota > p{
+        font-size: 8pt;
+    }
+
+    .titulo > p{
+        font-size: 8pt;
+    }
+    
+    #logoFooter{
+        border: 0px solid #fff;
+        width: 90px;
+        height: 30px;
+        background-image: url(img/pellicula.png);
+        background-size: 90px 30px;
+        float: left;
+        margin-top: 40px;
+        margin-left: 5px;
+    }
+    
+    #copy{
+        font-size: 8pt;
+    }
+    
+    #contactFooter{
+        font-size: 8pt;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    main{
+        height: 600px;
+    }
+    
+    .texto_grande {
+        font-size: 12pt;
+    }
+
+    .title {
+        font-size: 9pt;
+    }
+
+    .texto {
+        font-size: 7pt;
+    }
+
+    #display{
+        display: none;
+    }
+
+    #menu{
+        margin-top: -80px;
+    }
+
+    #pesquisa {
+        width: 145px;
+        height: 10px;
+        margin-right: 18%;
+        margin-top: -180px;
+        position: relative;
+    }
+
+    #barra_pesquisa {
+        width: 100%;
+        height: 27px;
+        padding-left: 10px; 
+        font-size: 9pt;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+    }
+
+    #lupa {
+        position: absolute;
+        top:40%;
+        left: 88%;
+        width: 14px;
+    }
+
+    #btnLogin{
+        font-size: 8pt;
+        margin-top: -180px;
+        margin-right: 5px;
+        padding: 0px;
+        width: 50px;
+        height: 25px;
+        letter-spacing: 1px;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    #logoFooter{
+        border: 0px solid #fff;
+        width: 60px;
+        height: 25px;
+        background-image: url(img/pellicula.png);
+        background-size: 60px 25px;
+        float: left;
+        margin-top: 40px;
+        margin-left: 5px;
+    }
+    
+    #copy{
+        font-size: 7pt;
+    }
+    
+    #contactFooter{
+        font-size: 7pt;
+    }
+
+}

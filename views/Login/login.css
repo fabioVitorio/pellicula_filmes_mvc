@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+}
+
+body{
+    background-image: url(img/background.png);
+    background-size: cover;
+}
+
+main {
+    border: 0px solid rgb(255, 255, 255);
+    width: 100%;
+    height: 730px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------FORM LOGIN--------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+#form{
+    display: block; /*aqui*/
+    border: 0px solid #000;
+    border-radius: 4px;
+    scale: 1;
+    width: 355px;
+    height: 400px;
+    top: 20%; 
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0, 0.93);
+}
+
+#logo{
+    border: 0px solid #fff;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-image: url(img/pellicula.png);
+    background-size: 120px 40px;
+}
+
+#logo > svg{
+    color: #e50914;
+    width: 36px; 
+    height: 36px;
+}
+
+h3{
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18pt;
+}
+
+.label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-left: 15%;
+}
+
+input{
+    width: 245px;
+    height: 30px;
+    border-radius: 2px;
+    outline: unset;
+    text-align: left;
+    border-color: #000;
+    color: #fff;
+    border: none;
+    background-color: rgb(59, 59, 59);
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 5px;
+    position: relative;
+}
+
+#olho{
+    width: 20px;
+    color: #fff;
+    position: absolute;
+    transform: translateY(-150%) translateX(1100%);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#olho:hover{
+    color: #e50914;
+}
+
+.btn{
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    border-radius: 3px;
+    border: none;
+    background-color: #e50914;
+    margin-top: 40px;
+    padding: 8px;
+    width: 255px;
+    height: 45px;
+    transition: .6s ease;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    background-color: #ac040c;
+}
+
+h4, a{
+    margin-top: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: 100;
+    color: rgb(133, 133, 133);
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------FORM CADASTRO------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+#formCad{
+    border: 0px solid #000;
+    border-radius: 4px;
+    scale: 1;
+    width: 390px;
+    height: 550px;
+    top: 10%; 
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0, 0.89);
+}
+
+#logoCad{
+    border: 0px solid #fff;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-image: url(img/pellicula.png);
+    background-size: 120px 40px;
+}
+
+.labelCad{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-left: 18%;
+}
+
+.inputCad{
+    width: 245px;
+    height: 30px;
+    border-radius: 2px;
+    outline: unset;
+    text-align: left;
+    border-color: #000;
+    color: #fff;
+    border: none;
+    background-color: rgb(59, 59, 59);
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 5px;
+    position: relative;
+}
+
+#olhoCad1{
+    width: 20px;
+    color: #fff;
+    position: absolute;
+    transform: translateY(-150%) translateX(480%);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#olhoCad1:hover{
+    color: #e50914;
+}
+
+#olhoCad2{
+    width: 20px;
+    color: #fff;
+    position: absolute;
+    transform: translateY(-150%) translateX(1120%);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#olhoCad2:hover{
+    color: #e50914;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------FOOTER----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+footer{
+    position: absolute;
+    border: 0px solid #fff;
+    width: 100%;
+    height: 30px;
+    margin: 0 0 100px 0;
+}
+
+footer > label {
+    text-align: center;
+    justify-content: center;
+}
+
+label{
+    font-size: 10pt;
+    color: #fff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content:left;
+    margin-top: 20px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------RESPONSIVIDADE--------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+@media(max-width: 500px){
+
+}

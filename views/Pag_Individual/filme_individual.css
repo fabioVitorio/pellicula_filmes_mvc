@@ -1,0 +1,766 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(31,31,31,1) 28%, rgba(0,0,0,1) 100%) !important;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------ HEADER -----------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+#menu{
+    border: 0px solid #fff;
+    height: 70px;
+    width: 100%;
+    margin-top: -100px;
+    background-color: transparent;
+    position: fixed;
+    z-index: 99;
+}
+
+#menu.sticky{
+    background-color: #121212;
+    border-bottom: 2px solid rgb(43, 43, 43);
+    height: 70px;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+}
+
+#logo{
+    border: 0px solid #fff;
+    width: 100px;
+    height: 40px;
+    background-image: url(img/pellicula.png);
+    background-size: 100px 40px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+#ul{
+    border: 0px solid #000;
+    width: 520px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+li{
+    display: inline;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14pt;
+    margin: 0 0 0 35px;
+    position: relative;
+    color: #fff;
+}
+
+#ul > li > a:hover{
+    color: rgb(248, 248, 248);
+}
+
+
+#ul > li > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#ul > li > a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #e50914;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+#ul > li > a:hover::after{
+    width: 100%;
+}
+
+#icon_user{
+    /* border: 1px solid black; */
+    display: block; /* DISPLAY LOGIN*/
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin-top: -32px;
+    margin-right: 10px;
+    float: right;
+    color: #fff;
+}
+
+#user{
+    width: 100%;
+    height: 100%;
+}
+
+/* POP UP DE LOGOUT */
+.icons-size{
+    color: #333;
+    font-size: 14px;
+}
+.action{
+    position: fixed;
+    right: 30px;
+    top:50px
+}
+.action .profile{
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+}
+
+.action .menuUser{
+    background-color:#FFF;
+    box-sizing:0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    right: -10px;
+    width: 200px;
+    transition: 0.5s;
+    top: 120px;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menuUser.active{
+    opacity: 1;
+    top: 15px;
+    visibility: visible;
+}
+.action .menuUser::before{
+    background-color:#fff;
+    content: '';
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    transform:rotate(45deg);
+    top:-5px;
+    width: 20px;
+}
+.action .menuUser h3{
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 20px 0px;
+    text-align: left;
+    width: 100%;
+}
+.action .menuUser h3 div{
+    color: #818181;
+    font-size: 14px;
+    font-weight: 400;
+}
+.action .menuUser ul li{
+    align-items: center;
+    border-top:1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 10px 0px;
+}
+
+.action .menuUser ul li a{
+    display: inline-block;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+
+.action .menuUser ul li:hover a{
+    color:#e50914;
+}
+
+.action .menuUser ul{
+    padding: 0;
+}
+/* FIM POP UP */
+
+
+
+#pesquisa {
+    width: 240px;
+    height: 35px;
+    float: right;
+    margin-top: -34px;
+    margin-right: 110px;
+    position: relative;
+}
+
+#barra_pesquisa {
+    width: 100%;
+    height: 34px;
+    padding-left: 10px; 
+    font-size: 12pt;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+#lupa {
+    position: absolute;
+    top:18%;
+    left: 88%;
+}
+
+button{
+    border: none;
+}
+
+/* !!!!! INÍCIO MENU BARRA LATERAL !!!!! */
+#toggle {
+    display: none; /* aqui*/
+    width: 28px;
+    height: 30px;
+    margin: 30px 0 0 140px;
+    position: relative;
+}
+  
+#toggle span:after,
+#toggle span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+}
+
+#toggle span:after{
+    top: 9px;
+}
+
+#toggle span {
+    position: relative;
+    display: block;
+}
+  
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #888;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+  
+#toggle.on span {
+    background-color: transparent;
+}
+
+#toggle.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+#toggle.on + #menuu {
+    opacity: 1;
+    visibility: visible;
+}
+  
+#menuu {
+    display: none; /* aqui*/
+    /* position: relative; */
+    color: #999;
+    width: 200px;
+    padding: 10px;
+    margin: 0 0 0 50px;
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans";
+    text-align: center;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+#menuu:after {
+    position: absolute;
+    top: -20px;
+    left: 155px;
+    content: "";
+    display: block;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+}
+
+#ulMenu, .liMenu, .a {
+    list-style: none;
+    display: none; /* aqui*/
+    margin: 0;
+    padding: 0;
+}
+
+.liMenu .a {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.liMenu .a:hover,
+.liMenu .a:focus {
+    background: #e50914;
+    color: #fff;
+}
+
+/* !!!!! FIM MENU BARRA LATERAL !!!!! */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------- MAIN -----------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+#filme {
+    border: 0px solid;
+    height: auto;
+    margin-top: 100px;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 3px;
+}
+
+#foto_filme {
+    border: 0px solid !important;
+    width: 25%;
+    height: 50vh;
+    border-radius: 2px;
+    float: left;
+    border: 1px solid;
+    background-image: url(img/capitainM.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#info_filme {
+    border: 0px solid !important;
+    width: 60%;
+    height: auto;
+    float: left;
+    margin-left: 90px;
+}
+
+#titulo {
+    border: 0px solid;
+    color: #fff;
+    height: 13%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22pt;
+    text-align: center;
+}
+
+#sinopse {
+    border: 0px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin-top: 15px;
+    height: 80%;
+}
+
+.texto {
+    font-size: 12pt;
+    margin-top: 25px;
+    letter-spacing: 2px;
+}
+
+#secBtn{
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#btnAvaliar {
+    width: 100px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 640;
+    color: rgb(32, 32, 32);
+    transition: all 0.3s ease-in-out;
+}
+
+#btnAvaliar:hover{
+    background-color: rgb(180, 180, 180);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------- COMENTÁRIOS --------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* comentário part 1 */
+#avaliacoes {
+    border: 0px solid;
+    height: auto;
+    margin-top: 75px;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 3px;
+}
+
+#comentarios {
+    border: 0px solid;
+    text-align: center;
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#nota {
+    border: 0px solid;
+    width: 120px;
+    height: 35px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#comentarios > p{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    padding: 5px;
+    width: 350px;
+    height: 20vh;
+    border-radius: 3px;
+    font-size: 12pt !important;
+}
+
+#secBtnComent{
+    border: 1px solid;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#btnEnviar{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(9, 211, 9);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnEnviar:hover{
+    scale: 1.05;
+    background-color: rgb(6, 163, 6);
+}
+
+
+/* comentário part 2 */
+#avaliacoes2 {
+    border: 0px solid;
+    height: auto;
+    margin-top: 95px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 3px;
+}
+
+#comentario1 {
+    border: 0px solid;
+    height: 20vh;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#foto_comentario {
+    border: 0px solid;
+    float:left;
+    height: 50px;
+    width: 50px;
+    background-image: url(img/user.png);
+    background-size: 100%;
+}
+
+#texto_comentario {
+    border: 0px solid;
+    float: left;
+    height: 100px;
+    width: 60%;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------- RESPONSIVIDADE --------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+@media only screen and (max-width: 991px) {
+
+   #filme {
+    width: 95%;
+   }
+
+   #avaliacoes {
+    width: 95%;
+   }
+
+   #avaliacoes2 {
+    width: 95%;
+   }
+
+}
+
+@media only screen and (max-width: 805px) {
+    li{
+        display: none;
+    }
+
+    #toggle {
+        display: block; /* aqui*/
+    }
+
+    #menuu {
+        display: block; /* aqui*/
+    }
+
+    #ulMenu, .liMenu, .a {
+        display: block; /* aqui*/
+    }
+
+    #btnLogin{
+        margin-top: -255px;
+        margin-right: 10px;
+    }
+
+    #icon_user{
+        width: 35px;
+        height: 35px;
+        margin-top: -35px;
+        margin-right: 10px;
+    }
+    
+    #user{
+        width: 100%;
+        height: 100%;
+    }
+
+    #pesquisa {
+        margin-top: -255px;
+        margin-right: 110px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #foto_filme {
+        float:none;
+        margin: 0 auto;
+        width: 45%;
+    }
+
+    #info_filme {
+        float: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 95%;
+    }
+
+    #comentarios {
+        float: none;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 80%;
+    }
+
+    #nota {
+        float: none;
+        margin: 0 auto;
+       
+    }
+
+    #avaliacao {
+        width: 35%;
+
+    }
+    #avaliacoes2 {
+        padding: 0;
+       }
+
+    #foto_comentario {
+        width: 70px;
+        height: 70px;
+    }
+
+    #texto_comentario {
+        width: 70%;
+        margin-left: 5px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    #foto_comentario {
+        width: 50px;
+        height: 50px;
+    }
+
+    #texto_comentario {
+        width: 70%;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    #pesquisa {
+        width: 200px;
+        margin-right: 80px;
+        margin-top: -238px;
+    }
+    
+    #barra_pesquisa {
+        width: 100%;
+        height: 34px;
+        font-size: 11pt;
+    }
+    
+    #icon_user{
+        width: 35px;
+        height: 35px;
+        margin-top: -35px;
+        margin-right: -15px;
+    }
+
+    #menuu {
+        width: 180px;
+    }
+
+    #ulMenu, .liMenu, .a {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+    }
+
+    #foto_filme{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 451px) {
+    #pesquisa {
+        width: 150px;
+        margin-right: 80px;
+        margin-top: -238px;
+    }
+    
+    #barra_pesquisa {
+        width: 100%;
+        height: 30px;
+        font-size: 9pt;
+    }
+
+    #lupa {
+        width: 16px;
+        left: 86%;
+    }
+    
+    #btnLogin{
+        width: 50px;
+        height: 30px;
+        font-size: 8pt;
+    }
+
+    #icon_user{
+        width: 30px;
+    }
+
+    #toggle {
+        width: 25px;
+        margin-left: 105px;
+    }
+
+    #logo{
+        width: 80px;
+        height: 35px;
+        background-size: 80px 35px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    #titulo > p {
+        font-size: 17pt;
+    }
+
+    .texto{
+        font-size: 10pt;
+    }
+
+    #avaliacoes {
+    border: 0px solid;
+    height: auto;
+    margin-top: 75px;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 3px;
+    }
+
+    #comentarios {
+        border: 0px solid;
+        text-align: center;
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #comentarios > p{
+        font-size: 12pt;
+        margin-top: 30px;
+    }
+
+    textarea {
+        width: 300px;
+        height: 25vh;
+        font-size: 11pt !important;
+    }
+
+    #foto_filme{
+        height: 240px;
+    }
+
+}
