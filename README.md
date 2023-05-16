@@ -1,6 +1,6 @@
 ### <p align='center'> ![pellicula](https://github.com/fabioVitorio/pellicula_filmes_mvc/assets/109548564/85ce39dd-8736-4720-8592-2f8b7ccdc006) </p>
 <br>
-<p align='center'> Flow control and customer scheduling system in a barber shop <br></p>
+<p align='center'> Film estimation system <br></p>
 
 ##
 ### ⚙️ Installation
