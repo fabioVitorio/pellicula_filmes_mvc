@@ -1,10 +1,22 @@
-## ⚙️*Sistema de Avaliação de filmes* 
->✅Estrutura MVC <br>
->✅Metodologias ágeis <br>
->✅Níveis de acesso <br>
->✅Validações <br>
->✅Responsivo <br>
->✅PHP, MySQL, JavaScript
+### <p align='center'> ![logo_menu](https://github.com/fabioVitorio/barber_shop/assets/109548564/c33dca05-06d3-452c-a6bc-479e044ccc75) </p>
+<br>
+<p align='center'> Flow control and customer scheduling system in a barber shop <br></p>
+
+##
+### ⚙️ Installation
+```bash
+~
+```
+##
+#### Skills
+- ⚙️ MVC <br>
+- 🔖 SCRUM <br>
+- 📒 UML diagrams <br>
+- 📱 Responsive
+ #### Technologies
+- 🔵 PHP <br>
+- 🟤 MySQL <br>
+- 🟡 JavaScript <br>
 
 <div>
   <img height="100em" src="https://github-readme-stats.vercel.app/api/pin/?username=fabioVitorio&repo=pellicula_filmes"/>
@@ -21,15 +33,15 @@
 <img src="https://user-images.githubusercontent.com/105173431/209452024-174188f0-d7dc-4bae-82f6-12ddfd4d9bcc.png" /> 
   
   
-## 🖥️*Funcionalidades* 
->👨🏻‍💻 **Administrador** <br>
->▫️ Cadastrar filme <br>
->▫️ Editar filme<br>
->▫️ Excluir filme<br><br>
->🙎🏻‍♂ **Usuário** <br>
->▫️ Ver sinopse <br>
->▫️ Ver avaliação<br>
->▫️ Ver ranking <br>
->▫️ Ver comentários<br>
->▫️ Realizar avaliação<br>
->▫️ Realizar comentários<br>
+## 🖥️*Features*
+>👨🏻‍💻 **Administrator** <br>
+>▫️ Register movie <br>
+>▫️ Edit movie<br>
+>▫️ Delete movie<br><br>
+>🙎🏻‍♂ **User** <br>
+>▫️ See synopsis <br>
+>▫️ See review<br>
+>▫️ See ranking <br>
+>▫️ View comments<br>
+>▫️ Perform assessment<br>
+>▫️ Make comments<br>
